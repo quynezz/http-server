@@ -9,6 +9,12 @@
 int client(int client_socket) {
     ssize_t n = 0;
     char buf[1024];
+    char response[] =
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Length: 13\r\n"
+        "Content-Type: text/plain\r\n"
+        "\r\n"
+        "This is 3x3 👻";
     for (;;) {
         printf("\n-------------------------------------\n");
         memset(buf, 0, sizeof(buf));
@@ -21,8 +27,9 @@ int client(int client_socket) {
             printf("Conenction closed by peer\n");
             break;
         }
-        printf("Received %ld bytes: %s", n, buf);
+        printf("Request:\n%s", buf);
+        (void)write(client_socket, response, sizeof(response) - 1);
     }
-    printf("\n-------------------------------------\n");
+    printf("-------------------------------------\n");
     return 0;
 }
