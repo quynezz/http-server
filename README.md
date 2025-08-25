@@ -15,7 +15,7 @@ cmake
 make
 ```
 
-> [!NOTE]: Make sure to run the cmake command only once to generate the necessary build files.
+>[!NOTE]: Make sure to run the cmake command only once to generate the necessary build files.
 
 ## Run the server:
 
