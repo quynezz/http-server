@@ -11,11 +11,11 @@ git clone https://github.com/quynezz/http-server.git
 ## Build the project:
 
 ```bash
-cmake
+cmake CMakeLists.txt
 make
 ```
 
-> [!NOTE] Make sure to run the cmake command only once to generate the necessary build files.
+> [!NOTE] Run the above commands once only !
 
 ## Run the server:
 
