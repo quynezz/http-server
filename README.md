@@ -1,6 +1,6 @@
 # Http server in C (with clang, cmake and C lsp)
 
-## First, make sure you have clang, cmake and a C language server installed on your system.
+## First, make sure you have clangd, cmake and a C language server installed on your system.
 
 ## Clone the repository:
 
