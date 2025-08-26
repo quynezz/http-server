@@ -1,5 +1,5 @@
-#include "fs.h"
-#include "string_ops.h"
+#include "file_sys.h"
+#include "strings.h"
 #include <fcntl.h>
 #include <linux/limits.h>
 #include <netinet/in.h>
