@@ -7,6 +7,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define STRING_VIEW_FROM_LITERAL(str)                                          \
+    \ (string_view){.data = str, .len = sizeof(str) - 1}
+
 typedef struct {
     const char *data;
     size_t len;
@@ -71,9 +74,6 @@ static void free_splits(string_splits *splits) {
 extern inline bool string_view_equal(string_view *l, string_view *r) {
     return l->len == r->len && memcmp(l->data, r->data, l->len) == 0;
 }
-
-#define STRING_VIEW_FROM_LITERAL(str)                                          \
-    (string_view){.data = str, .len = sizeof(str) - 1}
 
 extern inline string_view string_view_from_cstr(const char *str) {
     string_view s;
