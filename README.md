@@ -1,5 +1,9 @@
 # Http server in C (with clang, cmake and C lsp)
 
+## Overview about the system paradigm
+
+![Socket design](./image/http-server-socket.png)
+
 ## First, make sure you have clangd, cmake and a C language server installed on your system.
 
 ## Clone the repository:
